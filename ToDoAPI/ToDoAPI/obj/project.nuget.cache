@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Z3rml1fv3skn57oZHxha1GhC1OpAOis7w+ep7nkqPk/V0HaaI03IAp4bLHmbpn3aoD5FVuktNzCGFBkF1WXvYw==",
+  "dgSpecHash": "pWaxP2Mhtcw/c09O7rWkSlU3ussTqVASp5XzPiTKySVGjhOoug+/Asd07uCOI0ye64YZCr7BRil8lp2Pvxka5w==",
   "success": true,
   "projectFilePath": "D:\\ToDo\\ToDoAPI\\ToDoAPI\\ToDoAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\gokulraj.raja\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\gokulraj.raja\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\gokulraj.raja\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\gokulraj.raja\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\gokulraj.raja\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\gokulraj.raja\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\gokulraj.raja\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\gokulraj.raja\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.15\\microsoft.entityframeworkcore.6.0.15.nupkg.sha512",
