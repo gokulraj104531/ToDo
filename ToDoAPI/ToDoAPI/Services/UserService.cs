@@ -76,10 +76,7 @@ namespace ToDoAPI.Services
             }
         }
 
-        public User GetUserByUserName(string userName)
-        {
-            return userrepository.GetByUserName(userName);
-        }
+       
 
         public LoginModel LoginServices(string username, string password)
         {

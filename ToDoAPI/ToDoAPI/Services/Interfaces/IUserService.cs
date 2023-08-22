@@ -13,7 +13,7 @@ namespace ToDoAPI.Services.Interfaces
 
         List<UserDTO> GetAllService();
 
-        User GetUserByUserName(string userName);
+        
         LoginModel LoginServices(string username, string password);
         string GenerateToken(string username);
         bool IsTokenValid(string token);
