@@ -80,7 +80,7 @@ namespace ToDoAPI.Controllers
         }
 
         [HttpGet]
-        [Route("Login/{User}/{Pass}")]
+        [Route("Login/{user}/{pass}")]
         public string? Login(string user, string pass)
         {
             try
