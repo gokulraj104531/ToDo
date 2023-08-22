@@ -10,6 +10,13 @@ namespace ToDoAPI.Profiles
         public MapperProfile() {
             CreateMap<User,UserDTO>();
             CreateMap<UserDTO, User>();
+
+            CreateMap<ToDoList, ToDoListDTO>();
+            CreateMap<ToDoListDTO, ToDoList>();
+
+            CreateMap<User, LoginModel>();
+            CreateMap<LoginModel, User>();
+
         }
 
 

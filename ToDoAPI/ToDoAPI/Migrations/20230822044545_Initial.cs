@@ -25,7 +25,7 @@ namespace ToDoAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Todolist",
+                name: "ToDoLists",
                 columns: table => new
                 {
                     ToDoListId = table.Column<int>(type: "int", nullable: false)
@@ -34,29 +34,29 @@ namespace ToDoAPI.Migrations
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
                     DueTime = table.Column<DateTime>(type: "datetime2", nullable: true),
                     ToDoTitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ToDoList = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ToDoListDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     isCompleted = table.Column<bool>(type: "bit", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Todolist", x => x.ToDoListId);
+                    table.PrimaryKey("PK_ToDoLists", x => x.ToDoListId);
                     table.ForeignKey(
-                        name: "FK_Todolist_Users_UserName",
+                        name: "FK_ToDoLists_Users_UserName",
                         column: x => x.UserName,
                         principalTable: "Users",
                         principalColumn: "UserName");
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Todolist_UserName",
-                table: "Todolist",
+                name: "IX_ToDoLists_UserName",
+                table: "ToDoLists",
                 column: "UserName");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Todolist");
+                name: "ToDoLists");
 
             migrationBuilder.DropTable(
                 name: "Users");

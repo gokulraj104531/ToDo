@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Runtime.CompilerServices;
 using ToDoAPI.DTO;
+using ToDoAPI.Models;
+using ToDoAPI.Repositories;
 using ToDoAPI.Services.Interfaces;
 
 namespace ToDoAPI.Controllers
@@ -76,5 +78,31 @@ namespace ToDoAPI.Controllers
                 throw;
             }
         }
+
+        [HttpGet]
+        [Route("Login/{User}/{Pass}")]
+        public string? Login(string User, string Pass)
+        {
+            try
+            {
+                var validuser = _userService.LoginServices(User, Pass);
+                if (validuser != null)
+                {
+                    var result = _userService.GenerateToken(User);
+                    return result;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
     }
 }

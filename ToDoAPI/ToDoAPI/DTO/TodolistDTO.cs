@@ -2,19 +2,19 @@
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
 using ToDoAPI.Models;
+using System.Text.Json.Serialization;
 
 namespace ToDoAPI.DTO
 {
-    public class TodolistDTO
+    public class ToDoListDTO
     {
         [Key]
         public int ToDoListId { get; set; }
+       
 
         [Display(Name = "UserName")]
-        public virtual string? UserName { get; set; }
-
         [ForeignKey("UserName")]
-        public virtual User user { get; set; }
+        public virtual string? UserName { get; set; }
 
         public DateTime? CreatedAt { get; set; }
 
@@ -22,7 +22,7 @@ namespace ToDoAPI.DTO
 
         public string? ToDoTitle { get; set; }
 
-        public string? ToDoList { get; set; }
+        public string? ToDoListDescription { get; set; }
 
         public bool? isCompleted { get; set; }
     }

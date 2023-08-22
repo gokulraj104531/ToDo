@@ -13,5 +13,6 @@ namespace ToDoAPI.Repositories.Interfaces
         List<User> GetAll();
 
         User GetByUserName(string userName);
+        User? Login(string username, string password);
     }
 }

@@ -4,16 +4,14 @@ using System.Text.Json.Serialization;
 
 namespace ToDoAPI.Models
 {
-    public class Todolist
+    public class ToDoList
     {
         [Key]
         public int ToDoListId { get; set; }
 
         [Display(Name = "UserName")]
-        public virtual string? UserName { get; set; }
-
         [ForeignKey("UserName")]
-        public virtual User user { get; set; }
+        public virtual string? UserName { get; set; }
 
         public DateTime? CreatedAt { get; set; }
 
@@ -21,7 +19,7 @@ namespace ToDoAPI.Models
 
         public string? ToDoTitle { get; set; }
 
-        public string? ToDoList { get; set; }    
+        public string? ToDoListDescription { get; set; }    
 
         public bool? isCompleted { get; set; }
     }

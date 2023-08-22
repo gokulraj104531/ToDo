@@ -95,5 +95,26 @@ namespace ToDoAPI.Repositories
             }
         }
 
+        public User? Login(string username, string password)
+        {
+            try
+            {
+                User userRegistration = _dataContext.Users.Find(username);
+                if (userRegistration != null)
+                {
+                    if (BCrypt.Net.BCrypt.Verify(password, userRegistration.Password))
+                    {
+                        return userRegistration;
+                    }
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+
     }
 }

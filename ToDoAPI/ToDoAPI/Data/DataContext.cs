@@ -10,7 +10,7 @@ namespace ToDoAPI.Data
         
         public DbSet<User> Users { get; set; }
 
-        public DbSet<Todolist> Todolist { get; set; }    
+        public DbSet<ToDoList> ToDoLists { get; set; }    
 
     }
 }

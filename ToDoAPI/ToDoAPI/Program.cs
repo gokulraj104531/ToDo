@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ToDoAPI.Data;
+using ToDoAPI.Models;
 using ToDoAPI.Repositories;
 using ToDoAPI.Repositories.Interfaces;
 using ToDoAPI.Services;
@@ -18,7 +19,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddTransient<IUserRepository, UserRepository>();
+builder.Services.AddTransient<IToDoListRepository,ToDoListRepository>();
 builder.Services.AddTransient<IUserService,UserService>();
+builder.Services.AddTransient<IToDoListService, ToDoListService>();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();

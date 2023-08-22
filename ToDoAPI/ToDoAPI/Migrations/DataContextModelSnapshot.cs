@@ -22,7 +22,7 @@ namespace ToDoAPI.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("ToDoAPI.Models.Todolist", b =>
+            modelBuilder.Entity("ToDoAPI.Models.ToDoList", b =>
                 {
                     b.Property<int>("ToDoListId")
                         .ValueGeneratedOnAdd()
@@ -36,7 +36,7 @@ namespace ToDoAPI.Migrations
                     b.Property<DateTime?>("DueTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("ToDoList")
+                    b.Property<string>("ToDoListDescription")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ToDoTitle")
@@ -52,7 +52,7 @@ namespace ToDoAPI.Migrations
 
                     b.HasIndex("UserName");
 
-                    b.ToTable("Todolist");
+                    b.ToTable("ToDoLists");
                 });
 
             modelBuilder.Entity("ToDoAPI.Models.User", b =>
@@ -81,7 +81,7 @@ namespace ToDoAPI.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("ToDoAPI.Models.Todolist", b =>
+            modelBuilder.Entity("ToDoAPI.Models.ToDoList", b =>
                 {
                     b.HasOne("ToDoAPI.Models.User", "user")
                         .WithMany()

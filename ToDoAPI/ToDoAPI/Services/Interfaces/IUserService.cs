@@ -1,10 +1,11 @@
 ﻿using ToDoAPI.DTO;
+using ToDoAPI.Models;
 
 namespace ToDoAPI.Services.Interfaces
 {
     public interface IUserService
     {
-         Task AddUserService(UserDTO userDTO);
+        Task AddUserService(UserDTO userDTO);
 
         Task UpdateUserService(UserDTO userDTO);
 
@@ -12,6 +13,10 @@ namespace ToDoAPI.Services.Interfaces
 
         List<UserDTO> GetAllService();
 
+        User GetUserByUserName(string userName);
+        LoginModel LoginServices(string username, string password);
+        string GenerateToken(string username);
+        bool IsTokenValid(string token);
 
     }
 }
