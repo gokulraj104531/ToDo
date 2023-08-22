@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "pWaxP2Mhtcw/c09O7rWkSlU3ussTqVASp5XzPiTKySVGjhOoug+/Asd07uCOI0ye64YZCr7BRil8lp2Pvxka5w==",
+  "dgSpecHash": "xV/CDk4w6ZcC4UrYrNyghKy/i06vEW82xGa2mnbUk8d9/EcMwZDHvx10whxD0nk3IsPKlHya3eGSUyK9Dg6azQ==",
   "success": true,
   "projectFilePath": "D:\\ToDo\\ToDoAPI\\ToDoAPI\\ToDoAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gokulraj.raja\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\gokulraj.raja\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\gokulraj.raja\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\gokulraj.raja\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\gokulraj.raja\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\gokulraj.raja\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

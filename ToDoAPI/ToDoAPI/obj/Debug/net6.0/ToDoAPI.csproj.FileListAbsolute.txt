@@ -68,3 +68,4 @@ D:\ToDo\ToDoAPI\ToDoAPI\obj\Debug\net6.0\refint\ToDoAPI.dll
 D:\ToDo\ToDoAPI\ToDoAPI\obj\Debug\net6.0\ToDoAPI.pdb
 D:\ToDo\ToDoAPI\ToDoAPI\obj\Debug\net6.0\ToDoAPI.genruntimeconfig.cache
 D:\ToDo\ToDoAPI\ToDoAPI\obj\Debug\net6.0\ref\ToDoAPI.dll
+D:\ToDo\ToDoAPI\ToDoAPI\bin\Debug\net6.0\BCrypt.Net-Next.dll
