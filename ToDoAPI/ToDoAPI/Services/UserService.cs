@@ -76,8 +76,6 @@ namespace ToDoAPI.Services
             }
         }
 
-       
-
         public LoginModel LoginServices(string username, string password)
         {
             try

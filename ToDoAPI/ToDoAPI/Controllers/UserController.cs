@@ -81,14 +81,14 @@ namespace ToDoAPI.Controllers
 
         [HttpGet]
         [Route("Login/{User}/{Pass}")]
-        public string? Login(string User, string Pass)
+        public string? Login(string user, string pass)
         {
             try
             {
-                var validuser = _userService.LoginServices(User, Pass);
+                var validuser = _userService.LoginServices(user, pass);
                 if (validuser != null)
                 {
-                    var result = _userService.GenerateToken(User);
+                    var result = _userService.GenerateToken(user);
                     return result;
                 }
                 else
