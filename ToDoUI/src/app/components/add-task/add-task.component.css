@@ -1,0 +1,39 @@
+.header{
+    
+    justify-content: center;
+    align-content: center;
+}
+
+.mat-card{
+    margin: 2%;
+    text-align:left;
+  }
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form-description {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .form-full-width {
+    width: 45%; 
+  }
+
+  
+  @media (max-width: 600px) {
+    .form-row {
+      flex-direction: column;
+    }
+  }
+  

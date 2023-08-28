@@ -21,11 +21,12 @@ namespace ToDoAPI.Controllers
 
         [HttpPost]
         [Route("AddUser")]
-        public async Task AddUser(UserDTO userDTO)
+        public async Task<IActionResult> AddUser(UserDTO userDTO)
         {
             try
             {
                 await _userService.AddUserService(userDTO);
+                return Ok();
             }
             catch (Exception)
             {
@@ -50,11 +51,12 @@ namespace ToDoAPI.Controllers
 
         [HttpDelete]
         [Route("DeleteUser/{userName}")]
-        public async Task DeleteUser(string userName)
+        public async Task<IActionResult> DeleteUser(string userName)
         {
             try
             {
                 await _userService.DeleteUserService(userName);
+                return Ok();
             }
             catch (Exception)
             {

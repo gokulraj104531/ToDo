@@ -16,6 +16,7 @@ namespace ToDoAPI.Repositories
         {
             try
             {
+                toDoList.isCompleted = false;
                 _dataContext.ToDoLists.Add(toDoList);
                 await _dataContext.SaveChangesAsync();
             }

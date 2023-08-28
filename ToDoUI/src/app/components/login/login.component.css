@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.form {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+mat-card-content,
+mat-card-footer,
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2%;
+}
+
+.mat-mdc-form-field {
+  width: 90%;
+  margin: 1% 5% 1% 5%;
+}

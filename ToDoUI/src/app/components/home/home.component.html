@@ -1,0 +1,34 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+    <button (click)="drawer.toggle()" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>ToDo</span>
+    <span class="example-spacer"></span>
+    <!-- <button routerLink="/addtask" mat-button>Home</button>
+    <button routerLink="/active" mat-button>Add Task</button>
+     <button routerLink="/home" mat-button>Home</button>
+    <button routerLink="/home" mat-button>Home</button>  -->
+
+    <button mat-raised-button (click)="signOut()">SignOut</button>
+</mat-toolbar>
+
+<mat-drawer-container>
+    <mat-drawer #drawer opened="true" mode="side">
+        <mat-nav-list>
+            <mat-list-item>
+                <button mat-button routerLink="addtask/:toDoListId"><mat-icon>add</mat-icon>Add Task</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button routerLink="active" mat-button><mat-icon>view_list</mat-icon>Active</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button routerLink="completed" mat-button><mat-icon>check_circle</mat-icon>Completed</button>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div style="text-align: center; min-height: 525px;">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>

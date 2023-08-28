@@ -23,7 +23,13 @@ builder.Services.AddTransient<IToDoListRepository,ToDoListRepository>();
 builder.Services.AddTransient<IUserService,UserService>();
 builder.Services.AddTransient<IToDoListService, ToDoListService>();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddCors((corsOptions) =>
+{
+    corsOptions.AddPolicy("Mypolicy", (policyoptions) =>
+    {
+        policyoptions.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod();
+    });
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -32,7 +38,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors("Mypolicy");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

@@ -22,5 +22,6 @@ namespace ToDoAPI.Models
         public string? ToDoListDescription { get; set; }    
 
         public bool? isCompleted { get; set; }
+        //public virtual User user { get; set; }      
     }
 }

@@ -54,7 +54,6 @@ namespace ToDoAPI.Services
             try
             {
                 await userrepository.DeleteUser(userName);
-
             }
             catch (Exception)
             {

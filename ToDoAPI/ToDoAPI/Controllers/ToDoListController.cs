@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Query.Internal;
 using ToDoAPI.DTO;
+using ToDoAPI.Models;
 using ToDoAPI.Services.Interfaces;
 
 namespace ToDoAPI.Controllers
@@ -28,10 +29,10 @@ namespace ToDoAPI.Controllers
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
+
 
 
         [HttpPut]
@@ -41,11 +42,11 @@ namespace ToDoAPI.Controllers
             try
             {
                 await toDoListService.UpdateToDoListService(toDoListDTO);
-                return NoContent();
+                return Ok();
             }
             catch (Exception)
             {
-                throw;
+                return NoContent();
             }
         }
 
@@ -60,7 +61,7 @@ namespace ToDoAPI.Controllers
             catch (Exception)
             {
 
-                throw;
+                BadRequest();
             }
         }
 
@@ -79,6 +80,23 @@ namespace ToDoAPI.Controllers
                 throw;
             }
         }
+
+        [HttpGet]
+        [Route("GetToDoListById/{ToDoListId}")]
+        public List<ToDoListDTO> GetToDoListById(int ToDoListId)
+        {
+            try
+            {
+                var toDoListById = toDoListService.GetToDoListsById(ToDoListId);
+                return toDoListById;
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+        }
+
+
 
         [HttpGet]
         [Route("GetToDoListByUserName/{userName}")]

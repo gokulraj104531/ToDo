@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="form">
+        <mat-card class="mat-card mat-elevation-z8">
+            <mat-card-header class="header">
+                <h2>Login</h2>
+            </mat-card-header>
+            <mat-card-content>
+                <form [formGroup]="Userform!"  >
+                    <mat-form-field class="mat-50">
+                        <mat-label>UserName</mat-label>
+                        <input matInput formControlName="Username" type="text" >
+                    </mat-form-field>
+                    <mat-form-field class="mat-50">
+                        <mat-label>Password</mat-label>
+                        <input matInput formControlName="Password" type="password">
+                    </mat-form-field>
+                  
+                </form>
+            </mat-card-content>
+            <mat-card-footer>
+                <button mat-raised-button color="primary" type="submit" (click)="onLogin()">Login</button>
+                <h4 style="margin-top: 3%;">Already having an account
+                    <a routerLink="/register">Register!</a>
+                </h4>
+            </mat-card-footer>
+            
+        </mat-card>
+    </div>
+    
+</div>

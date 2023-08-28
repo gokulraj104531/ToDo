@@ -1,0 +1,35 @@
+<form [formGroup]="Todoform!" (ngSubmit)="OnSubmit()" class="form-container">
+    <mat-card class="mat-card">
+        <mat-card-header class="header">
+            <h1><b>To Do List</b></h1>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="form-row">
+            <mat-form-field class="mat-50">
+                <mat-label>Task Title</mat-label>
+                <input matInput placeholder="Task Title" formControlName="ToDoTitle" type="text">
+            </mat-form-field>
+            <mat-form-field class="mat-50">
+                <mat-label>DueTime</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="DueTime" type="datetime">
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+            </div>
+            <div class="form-description">
+            <mat-form-field class="form-full-width">
+                <mat-label>Task Description</mat-label>
+                <textarea matInput  formControlName="ToDoListDescription" placeholder="Say about the task" type="text"></textarea>
+            </mat-form-field>
+        </div>
+        </mat-card-content>
+        <mat-card-footer>
+            <div style="display: flex; justify-content: center;margin: 1.5%; text-align: right;">
+                <button mat-raised-button color="primary" type="submit" style="margin-right: 10px;">Add</button>
+                <button mat-raised-button color="accent" (click)="clear()">Reset</button>
+              </div>
+        </mat-card-footer>
+    </mat-card>
+</form>
+
+<!-- <app-active-task></app-active-task> -->
