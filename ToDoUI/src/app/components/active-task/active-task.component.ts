@@ -22,7 +22,6 @@ constructor(private service:HttpservicesService,private snackbar:MatSnackBar){
     getActiveList(){
       this.service.ActiveList(this.name).subscribe((data)=>{
         this.data=data;
-        console.warn(data)
       });
     }
 

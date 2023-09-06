@@ -1,0 +1,21 @@
+2023-08-30 11:05:14.386 +05:30 [INF] Now listening on: https://localhost:7036
+2023-08-30 11:05:14.414 +05:30 [INF] Now listening on: http://localhost:5038
+2023-08-30 11:05:14.419 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-30 11:05:14.420 +05:30 [INF] Hosting environment: Development
+2023-08-30 11:05:14.420 +05:30 [INF] Content root path: D:\ToDo\ToDoAPI\ToDoAPI\
+2023-08-30 11:05:14.996 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - -
+2023-08-30 11:05:15.290 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - - - 200 - text/html;charset=utf-8 297.1762ms
+2023-08-30 11:05:15.292 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - -
+2023-08-30 11:05:15.292 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - -
+2023-08-30 11:05:15.296 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 3.7370ms
+2023-08-30 11:05:15.303 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.4014ms
+2023-08-30 11:05:15.637 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - -
+2023-08-30 11:05:15.718 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 80.8922ms
+2023-08-30 11:05:47.408 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - -
+2023-08-30 11:05:47.427 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - - - 200 - text/html;charset=utf-8 18.9870ms
+2023-08-30 11:05:47.449 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - -
+2023-08-30 11:05:47.491 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 42.1992ms
+2023-08-30 11:05:47.500 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - -
+2023-08-30 11:05:47.501 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 0.4296ms
+2023-08-30 11:05:48.242 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - -
+2023-08-30 11:05:48.251 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 8.5439ms

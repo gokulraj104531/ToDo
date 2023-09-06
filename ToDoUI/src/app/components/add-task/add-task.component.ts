@@ -28,7 +28,9 @@ export class AddTaskComponent {
     this.checkId();
   }
   ngOnInit(): void {
+    console.log('Vlaue:',this.arouter.snapshot.params['toDoListId']);
     this.initForm();
+
   }
 
   initForm() {

@@ -24,7 +24,7 @@ export class CompletedTaskComponent {
   getCompletedList() {
     this.service.CompletedList(this.name).subscribe((data) => {
       this.data = data;
-      console.warn(data);
+    
     });
   }
 

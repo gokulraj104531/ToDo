@@ -1,0 +1,24 @@
+2023-08-30 11:06:14.394 +05:30 [INF] Now listening on: https://localhost:7036
+2023-08-30 11:06:14.444 +05:30 [INF] Now listening on: http://localhost:5038
+2023-08-30 11:06:14.458 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-30 11:06:14.463 +05:30 [INF] Hosting environment: Development
+2023-08-30 11:06:14.465 +05:30 [INF] Content root path: D:\ToDo\ToDoAPI\ToDoAPI\
+2023-08-30 11:06:17.695 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - -
+2023-08-30 11:06:18.834 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - -
+2023-08-30 11:06:18.834 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - -
+2023-08-30 11:06:18.875 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 35.8675ms
+2023-08-30 11:06:18.884 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - - - 200 - text/html;charset=utf-8 1203.3619ms
+2023-08-30 11:06:18.947 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 113.0942ms
+2023-08-30 11:06:19.333 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - -
+2023-08-30 11:06:19.736 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 403.2303ms
+2023-08-30 11:06:25.563 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/User/GetUsers - -
+2023-08-30 11:06:25.588 +05:30 [INF] Executing endpoint 'ToDoAPI.Controllers.UserController.GetUsers (ToDoAPI)'
+2023-08-30 11:06:25.648 +05:30 [INF] Route matched with {action = "GetUsers", controller = "User"}. Executing controller action with signature System.Collections.Generic.List`1[ToDoAPI.DTO.UserDTO] GetUsers() on controller ToDoAPI.Controllers.UserController (ToDoAPI).
+2023-08-30 11:06:28.525 +05:30 [INF] Entity Framework Core 6.0.15 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.15' with options: None
+2023-08-30 11:06:30.922 +05:30 [INF] Executed DbCommand (114ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserName], [u].[Email], [u].[Name], [u].[Password], [u].[PhoneNumber]
+FROM [Users] AS [u]
+2023-08-30 11:06:31.311 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ToDoAPI.DTO.UserDTO, ToDoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-30 11:06:31.365 +05:30 [INF] Executed action ToDoAPI.Controllers.UserController.GetUsers (ToDoAPI) in 5696.6203ms
+2023-08-30 11:06:31.367 +05:30 [INF] Executed endpoint 'ToDoAPI.Controllers.UserController.GetUsers (ToDoAPI)'
+2023-08-30 11:06:31.393 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/User/GetUsers - - - 200 - application/json;+charset=utf-8 5829.9704ms

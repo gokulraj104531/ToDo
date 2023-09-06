@@ -21,6 +21,7 @@ namespace ToDoAPI.Repositories
                 user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
                 _dataContext.Users.Add(user);
                 await _dataContext.SaveChangesAsync();
+               // return user;
             }
             catch (Exception)
             {
@@ -28,7 +29,7 @@ namespace ToDoAPI.Repositories
             }
         }
 
-        public  List<User> GetAll()
+        public List<User> GetAll()
         {
             try
             {
@@ -48,16 +49,13 @@ namespace ToDoAPI.Repositories
                 var user= await _dataContext.Users.FirstOrDefaultAsync(x => x.UserName == userName);
                 if (user != null)
                 {
-
                     _dataContext.Users.Remove(user);
                     await _dataContext.SaveChangesAsync();
                 }
-
             }
             catch (Exception)
             {
-
-                throw;
+               throw;
             }
         }
 

@@ -1,0 +1,24 @@
+2023-08-30 12:32:40.078 +05:30 [INF] Now listening on: https://localhost:7036
+2023-08-30 12:32:40.101 +05:30 [INF] Now listening on: http://localhost:5038
+2023-08-30 12:32:40.107 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-30 12:32:40.108 +05:30 [INF] Hosting environment: Development
+2023-08-30 12:32:40.108 +05:30 [INF] Content root path: D:\ToDo\ToDoAPI\ToDoAPI\
+2023-08-30 12:32:40.888 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/index.html - -
+2023-08-30 12:32:41.220 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/index.html - - - 200 - text/html;charset=utf-8 334.6538ms
+2023-08-30 12:32:41.240 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - -
+2023-08-30 12:32:41.241 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/_vs/browserLink - -
+2023-08-30 12:32:41.246 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 6.3546ms
+2023-08-30 12:32:41.262 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 20.6394ms
+2023-08-30 12:32:41.325 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - -
+2023-08-30 12:32:41.427 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 101.2771ms
+2023-08-30 12:32:47.537 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7036/api/ToDoList/GetToDoList - -
+2023-08-30 12:32:47.548 +05:30 [INF] Executing endpoint 'ToDoAPI.Controllers.ToDoListController.GetToDoLists (ToDoAPI)'
+2023-08-30 12:32:47.590 +05:30 [INF] Route matched with {action = "GetToDoLists", controller = "ToDoList"}. Executing controller action with signature System.Collections.Generic.List`1[ToDoAPI.DTO.ToDoListDTO] GetToDoLists() on controller ToDoAPI.Controllers.ToDoListController (ToDoAPI).
+2023-08-30 12:32:49.587 +05:30 [INF] Entity Framework Core 6.0.15 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.15' with options: None
+2023-08-30 12:32:50.873 +05:30 [INF] Executed DbCommand (89ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[ToDoListId], [t].[CreatedAt], [t].[DueTime], [t].[ToDoListDescription], [t].[ToDoTitle], [t].[UserName], [t].[isCompleted]
+FROM [ToDoLists] AS [t]
+2023-08-30 12:32:51.100 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ToDoAPI.DTO.ToDoListDTO, ToDoAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-30 12:32:51.245 +05:30 [INF] Executed action ToDoAPI.Controllers.ToDoListController.GetToDoLists (ToDoAPI) in 3641.7723ms
+2023-08-30 12:32:51.245 +05:30 [INF] Executed endpoint 'ToDoAPI.Controllers.ToDoListController.GetToDoLists (ToDoAPI)'
+2023-08-30 12:32:51.254 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7036/api/ToDoList/GetToDoList - - - 200 - application/json;+charset=utf-8 3717.8025ms

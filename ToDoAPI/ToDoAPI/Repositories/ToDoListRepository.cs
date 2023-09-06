@@ -101,8 +101,6 @@ namespace ToDoAPI.Repositories
         {
             try
             {
-                //var editToDoListActive = _dataContext.ToDoLists.FirstOrDefault(x => x.ToDoListId == toDoListId);
-                //editToDoListActive.isCompleted = true;
                 var task = _dataContext.ToDoLists.Find(toDoListId);
                 if (task != null)
                 {

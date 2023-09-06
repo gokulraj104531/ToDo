@@ -5,8 +5,14 @@ using ToDoAPI.Repositories;
 using ToDoAPI.Repositories.Interfaces;
 using ToDoAPI.Services;
 using ToDoAPI.Services.Interfaces;
+using Serilog;
+
 
 var builder = WebApplication.CreateBuilder(args);
+
+Log.Logger = new LoggerConfiguration().MinimumLevel.Information().WriteTo.File("Log/log.txt",rollingInterval:RollingInterval.Day).CreateLogger();
+//builder.Host.UseSerilog();
+builder.Logging.AddSerilog();
 
 // Add services to the container.
 builder.Services.AddDbContext<DataContext>(options =>

@@ -31,8 +31,6 @@ export class HttpservicesService {
     return this.httpclient.put(this.baseurl+"api/ToDoList/EditToDoList",toDo);
   }
 
-
-
   GetToDoListByUsername(userName:string){
     return this.httpclient.get(this.baseurl+"api/ToDoList/GetToDoListByUserName/"+userName);
   }
@@ -56,7 +54,5 @@ export class HttpservicesService {
   DeleteTask(toDoListId:number){
     return this.httpclient.delete(this.baseurl+"api/ToDoList/DeleteToDoList/"+toDoListId);
   }
-
-  
 
 }
