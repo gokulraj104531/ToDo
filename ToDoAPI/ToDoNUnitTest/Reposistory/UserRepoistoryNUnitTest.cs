@@ -1,13 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ToDoAPI.Data;
 using ToDoAPI.Models;
 using ToDoAPI.Repositories;
-using ToDoAPI.Repositories.Interfaces;
 
 namespace ToDoNUnitTest.Reposistory
 {

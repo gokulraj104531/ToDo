@@ -1,26 +1,33 @@
 <mat-toolbar>Active To DoList</mat-toolbar>
 <mat-card class="mat-card">
   <div class="card-container">
-    <mat-card *ngFor="let item of data" class="card">
-      <mat-card-content>
-        <div class="card-content-row">
-          <div class="left-content">
-            <mat-checkbox class="checkbox" (click)="toComplete(item.toDoListId)"></mat-checkbox>
-            <div class="title">{{ item.toDoTitle }}</div>
-            <div class="description">{{ item.toDoListDescription }}</div>
+    <ng-container *ngIf="data.length > 0; else noActiveTasks">
+      <mat-card *ngFor="let item of data" class="card">
+        <mat-card-content>
+          <div class="card-content-row">
+            <div class="left-content">
+              <mat-checkbox class="checkbox" (click)="toComplete(item.toDoListId)"></mat-checkbox>
+              <div class="title">{{ item.toDoTitle }}</div>
+              <div class="description">{{ item.toDoListDescription }}</div>
+            </div>
+            <div class="card-content-right">
+              <div class="duetime">Due Time:{{ item.dueTime | date: "dd/MM/yyyy" }}</div>
+              <button mat-icon-button color="primary" routerLink="/addtask/{{item.toDoListId}}">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-icon-button color="warn" (click)="deleteTask(item.toDoListId)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
           </div>
-          <div class="card-content-right">
-            <div class="duetime">Due Time:{{ item.dueTime | date: "dd/MM/yyyy" }}</div>
-            <button mat-icon-button color="primary" routerLink="/addtask/{{item.toDoListId}}">
-              <mat-icon>edit</mat-icon>
-            </button>
-            <button mat-icon-button color="warn" (click)="deleteTask(item.toDoListId)">
-              <mat-icon>delete</mat-icon>
-            </button>
-          </div>
-        </div>
-      </mat-card-content>
-    </mat-card>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
+    
+    <ng-template #noActiveTasks>
+      <p>No active tasks found.</p>
+    </ng-template>
   </div>
 </mat-card>
+
 

@@ -11,7 +11,6 @@ namespace ToDoAPI.DTO
         [Key]
         public int ToDoListId { get; set; }
        
-
         [Display(Name = "UserName")]
         [ForeignKey("UserName")]
         public virtual string? UserName { get; set; }
