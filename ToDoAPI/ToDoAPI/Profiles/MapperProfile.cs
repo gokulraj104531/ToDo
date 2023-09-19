@@ -8,7 +8,7 @@ namespace ToDoAPI.Profiles
     public class MapperProfile:Profile
     {
         public MapperProfile() {
-            CreateMap<User,UserDTO>();
+            CreateMap<User, UserDTO>();
             CreateMap<UserDTO, User>();
 
             CreateMap<ToDoList, ToDoListDTO>();

@@ -49,7 +49,7 @@ namespace ToDoAPI.Services
         {
             try
             {
-               await toDoListRepository.DeleteToDoList(toDoListId);
+                await toDoListRepository.DeleteToDoList(toDoListId);
             }
             catch (Exception)
             {
@@ -57,7 +57,6 @@ namespace ToDoAPI.Services
                 throw;
             }
         }
-
         public List<ToDoListDTO> GetToDoListsService()
         {
             try

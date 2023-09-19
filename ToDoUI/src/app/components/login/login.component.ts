@@ -41,10 +41,10 @@ export class LoginComponent implements OnInit {
     this.service
       .Login(this.Userform?.value.Username, this.Userform?.value.Password)
       .subscribe(
-        (response:any)=> {
-          const jwtToken=response.token;
-          if(jwtToken==null){
-            localStorage.setItem('authtoken', response);
+        (token:string)=> {
+          const jwtToken=token;
+          if(jwtToken!=null){
+            localStorage.setItem('authtoken', jwtToken);
             sessionStorage.setItem('Username', this.Userform?.value.Username);
             this.router.navigateByUrl('addtask/:toDoListId');
           }
