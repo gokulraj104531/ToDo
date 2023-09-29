@@ -16,11 +16,13 @@ namespace ToDoAPI.Services
     {
         private readonly IUserRepository userrepository;
         private readonly IMapper _mapper;
+        public IUnitofWork _unitofwork;
 
-        public UserService(IUserRepository userrepository, IMapper mapper)
+        public UserService(IUserRepository userrepository, IMapper mapper, IUnitofWork unitofWork)
         {
             this.userrepository = userrepository;
             _mapper = mapper;
+            _unitofwork = unitofWork;
         }
 
         public async Task AddUserService(UserDTO userDTO)
@@ -41,7 +43,8 @@ namespace ToDoAPI.Services
             try
             {
                 User user = _mapper.Map<User>(userDTO);
-                await userrepository.UpdateUser(user);
+                _unitofwork.UserRepository.Updates(user);
+                _unitofwork.Commit();
             }
             catch (Exception)
             {
@@ -65,7 +68,7 @@ namespace ToDoAPI.Services
         {
             try
             {
-                var user = userrepository.GetAll();
+                var user = _unitofwork.UserRepository.GetAll();
                 List<UserDTO> userDto = _mapper.Map<List<UserDTO>>(user);
                 return userDto;
             }

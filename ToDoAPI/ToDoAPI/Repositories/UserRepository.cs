@@ -5,11 +5,11 @@ using ToDoAPI.Repositories.Interfaces;
 
 namespace ToDoAPI.Repositories
 {
-    public class UserRepository:IUserRepository
+    public class UserRepository:GenericRepository<User>, IUserRepository
     {
         private readonly DataContext _dataContext;
 
-        public UserRepository(DataContext dataContext)
+        public UserRepository(DataContext dataContext):base(dataContext) 
         {
             _dataContext = dataContext;
         }
@@ -29,18 +29,18 @@ namespace ToDoAPI.Repositories
             }
         }
 
-        public List<User> GetAll()
-        {
-            try
-            {
-                return _dataContext.Users.ToList();
-            }
-            catch (Exception)
-            {
+        //public List<User> GetAll()
+        //{
+        //    try
+        //    {
+        //        return _dataContext.Users.ToList();
+        //    }
+        //    catch (Exception)
+        //    {
 
-                throw;
-            }
-        }
+        //        throw;
+        //    }
+        //}
 
         public async Task DeleteUser(string userName)
         {
@@ -59,21 +59,21 @@ namespace ToDoAPI.Repositories
             }
         }
 
-        public async Task<User> UpdateUser(User user)
-        {
-            try
-            {
-                _dataContext.Users.Update(user);
-                await _dataContext.SaveChangesAsync();
-                return user;
+        //public async Task<User> UpdateUser(User user)
+        //{
+        //    try
+        //    {
+        //        _dataContext.Users.Update(user);
+        //        await _dataContext.SaveChangesAsync();
+        //        return user;
 
-            }
-            catch (Exception)
-            {
+        //    }
+        //    catch (Exception)
+        //    {
 
-                throw;
-            }
-        }
+        //        throw;
+        //    }
+        //}
 
         public User GetByUserName(string userName)
         {

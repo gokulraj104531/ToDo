@@ -2,12 +2,12 @@
 
 namespace ToDoAPI.Repositories.Interfaces
 {
-    public interface IToDoListRepository
+    public interface IToDoListRepository:IGenericRepository<ToDoList>
     {
         Task AddToDoList(ToDoList toDoList);
 
-        List<ToDoList> GetToDoLists();
-        Task<ToDoList> UpdateToDoList(ToDoList toDoList);
+        //List<ToDoList> GetToDoLists();
+        //Task<ToDoList> UpdateToDoList(ToDoList toDoList);
 
         Task DeleteToDoList(int toDoListId);
 

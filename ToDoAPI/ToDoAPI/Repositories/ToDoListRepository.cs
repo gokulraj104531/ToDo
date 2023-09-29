@@ -4,10 +4,10 @@ using ToDoAPI.Repositories.Interfaces;
 
 namespace ToDoAPI.Repositories
 {
-    public class ToDoListRepository: IToDoListRepository
+    public class ToDoListRepository:GenericRepository<ToDoList>, IToDoListRepository
     {
         private readonly DataContext _dataContext;
-        public ToDoListRepository(DataContext dataContext) 
+        public ToDoListRepository(DataContext dataContext):base(dataContext)
         {
             _dataContext = dataContext;
         }
@@ -27,31 +27,31 @@ namespace ToDoAPI.Repositories
         }
 
 
-        public List<ToDoList> GetToDoLists()
-        {
-            try
-            {
-                return _dataContext.ToDoLists.ToList();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
+        //public List<ToDoList> GetToDoLists()
+        //{
+        //    try
+        //    {
+        //        return _dataContext.ToDoLists.ToList();
+        //    }
+        //    catch (Exception)
+        //    {
+        //        throw;
+        //    }
+        //}
 
-        public async Task<ToDoList> UpdateToDoList(ToDoList toDoList)
-        {
-            try
-            {
-                _dataContext.ToDoLists.Update(toDoList);
-                await _dataContext.SaveChangesAsync();
-                return toDoList;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
+        //public async Task<ToDoList> UpdateToDoList(ToDoList toDoList)
+        //{
+        //    try
+        //    {
+        //        _dataContext.ToDoLists.Update(toDoList);
+        //        await _dataContext.SaveChangesAsync();
+        //        return toDoList;
+        //    }
+        //    catch (Exception)
+        //    {
+        //        throw;
+        //    }
+        //}
 
         public async Task DeleteToDoList(int toDoListId)
         {

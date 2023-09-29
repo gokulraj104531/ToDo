@@ -2,15 +2,15 @@
 
 namespace ToDoAPI.Repositories.Interfaces
 {
-    public interface IUserRepository
+    public interface IUserRepository:IGenericRepository<User>
     {
         Task AddUser(User user);
         
-        Task<User> UpdateUser(User user);
+       // Task<User> UpdateUser(User user);
 
         Task DeleteUser(string userName);
 
-        List<User> GetAll();
+       // List<User> GetAll();
 
         User GetByUserName(string userName);
         User? Login(string username, string password);

@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using ToDoAPI.Data;
-using ToDoAPI.Models;
 using ToDoAPI.Repositories;
 using ToDoAPI.Repositories.Interfaces;
 using ToDoAPI.Services;
@@ -28,6 +27,7 @@ builder.Services.AddTransient<IUserRepository, UserRepository>();
 builder.Services.AddTransient<IToDoListRepository,ToDoListRepository>();
 builder.Services.AddTransient<IUserService,UserService>();
 builder.Services.AddTransient<IToDoListService, ToDoListService>();
+builder.Services.AddScoped<IUnitofWork, UnitofWork>();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors((corsOptions) =>
 {

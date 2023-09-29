@@ -4,11 +4,14 @@
     </button>
     <span>ToDo</span>
     <span class="example-spacer"></span>
+    <!-- <mat-slide-toggle>
+        
+    </mat-slide-toggle> -->
     <button mat-raised-button (click)="signOut()">SignOut</button>
 </mat-toolbar>
 
 <mat-drawer-container>
-    <mat-drawer #drawer opened="true" mode="side">
+    <mat-drawer #drawer opened="false" mode="side">
         <mat-nav-list>
             <mat-list-item>
                 <button mat-button routerLink="addtask/:toDoListId"><mat-icon>add</mat-icon>Add Task</button>

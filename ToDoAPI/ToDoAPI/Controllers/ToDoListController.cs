@@ -21,11 +21,12 @@ namespace ToDoAPI.Controllers
 
         [HttpPost]
         [Route("AddToDoList")]
-        public async Task AddToDoList(ToDoListDTO toDoListDTO)
+        public async Task<IActionResult> AddToDoList(ToDoListDTO toDoListDTO)
         {
             try
             {
                 await toDoListService.AddToDoListService(toDoListDTO);
+                return Ok();
             }
             catch (Exception)
             {

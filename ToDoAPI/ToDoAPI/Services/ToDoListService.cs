@@ -11,11 +11,14 @@ namespace ToDoAPI.Services
     {
         private readonly IToDoListRepository toDoListRepository;
         private readonly IMapper _mapper;
+        private readonly IUnitofWork _unitofWork;
 
-        public ToDoListService(IToDoListRepository toDoListRepository,IMapper mapper)
+        public ToDoListService(IToDoListRepository toDoListRepository,IMapper mapper, IUnitofWork unitofWork)
         {
             this.toDoListRepository = toDoListRepository;
             _mapper = mapper;
+            _unitofWork = unitofWork;
+
         }
 
         public async Task AddToDoListService(ToDoListDTO toDoListDTO)
@@ -36,7 +39,7 @@ namespace ToDoAPI.Services
             try
             {
                 ToDoList toDoList = _mapper.Map<ToDoList>(toDoListDTO);
-                await toDoListRepository.UpdateToDoList(toDoList);
+                _unitofWork.ToDoListRepository.Updates(toDoList);
 
             }
             catch (Exception)
@@ -61,7 +64,7 @@ namespace ToDoAPI.Services
         {
             try
             {
-                var toDoList = toDoListRepository.GetToDoLists();
+                var toDoList = _unitofWork.ToDoListRepository.GetAll();
                 List<ToDoListDTO> toDoListDto=_mapper.Map<List<ToDoListDTO>>(toDoList);
                 return toDoListDto;
             }
