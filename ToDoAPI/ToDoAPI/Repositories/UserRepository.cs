@@ -29,18 +29,6 @@ namespace ToDoAPI.Repositories
             }
         }
 
-        //public List<User> GetAll()
-        //{
-        //    try
-        //    {
-        //        return _dataContext.Users.ToList();
-        //    }
-        //    catch (Exception)
-        //    {
-
-        //        throw;
-        //    }
-        //}
 
         public async Task DeleteUser(string userName)
         {
@@ -59,21 +47,7 @@ namespace ToDoAPI.Repositories
             }
         }
 
-        //public async Task<User> UpdateUser(User user)
-        //{
-        //    try
-        //    {
-        //        _dataContext.Users.Update(user);
-        //        await _dataContext.SaveChangesAsync();
-        //        return user;
 
-        //    }
-        //    catch (Exception)
-        //    {
-
-        //        throw;
-        //    }
-        //}
 
         public User GetByUserName(string userName)
         {

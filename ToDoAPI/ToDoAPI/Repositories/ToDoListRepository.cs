@@ -27,31 +27,6 @@ namespace ToDoAPI.Repositories
         }
 
 
-        //public List<ToDoList> GetToDoLists()
-        //{
-        //    try
-        //    {
-        //        return _dataContext.ToDoLists.ToList();
-        //    }
-        //    catch (Exception)
-        //    {
-        //        throw;
-        //    }
-        //}
-
-        //public async Task<ToDoList> UpdateToDoList(ToDoList toDoList)
-        //{
-        //    try
-        //    {
-        //        _dataContext.ToDoLists.Update(toDoList);
-        //        await _dataContext.SaveChangesAsync();
-        //        return toDoList;
-        //    }
-        //    catch (Exception)
-        //    {
-        //        throw;
-        //    }
-        //}
 
         public async Task DeleteToDoList(int toDoListId)
         {
